@@ -1,4 +1,4 @@
-import { toKebabCase } from './lib';
+import { formatTime as sampleFunction } from './lib';
 
-const samples = ['PascalCase', 'camelCase', 'snake_case', 'kebab-case', 'FirstName LastName', '--long-kebab--', ''];
-console.log(samples.map(sample => toKebabCase(sample)));
+const samples = [90, '12345', '10', '10000000000', 'abc'];
+console.log(samples.map(sample => sampleFunction(sample)));
