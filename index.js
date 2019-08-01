@@ -1,8 +1,9 @@
-import { convertObjectToArray } from './lib';
+import { parseNode } from './lib';
 
-const image = {
-  src: 'assets/image/cute-kitten.png',
-  alt: 'A happy kitten in a Santa hat',
-};
+const body = document.querySelector('body');
 
-console.log(convertObjectToArray(image));
+console.log({
+  node: parseNode(body),
+  selector: parseNode('body'),
+  notASelector: parseNode(5),
+});
