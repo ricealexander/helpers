@@ -1,4 +1,4 @@
-import { parseTimestamp } from './lib';
+import { toKebabCase } from './lib';
 
-const timestamps = ['0:00', '1:12', '34', '1:23:45.678'];
-console.log(timestamps.map(stamp => parseTimestamp(stamp)));
+const samples = ['firstName lastName', 'nums123 and 45letters', '%&^@AASDF_--', 'control-group'];
+console.log(samples.map(sample => toKebabCase(sample)));
