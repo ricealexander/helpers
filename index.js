@@ -1,9 +1,12 @@
-import { parseNode } from './lib';
+import { handleBounds } from './lib';
 
-const body = document.querySelector('body');
+const limit = 10;
+const dynamicValue = 5;
 
 console.log({
-  node: parseNode(body),
-  selector: parseNode('body'),
-  notASelector: parseNode(5),
+  smaller: handleBounds(-1, limit),
+  larger: handleBounds(15, limit),
+  insideRange: handleBounds(dynamicValue, limit),
+  addition: handleBounds(dynamicValue + 6, limit),
+  subtraction: handleBounds(dynamicValue - 6, limit),
 });

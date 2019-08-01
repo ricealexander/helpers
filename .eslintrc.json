@@ -12,5 +12,8 @@
     "html/html-extensions": [".html", ".php"]
   },
   "extends": "airbnb",
-  "rules": {}
+  "rules": {
+    // "spaced-comment": ["error", "always", { "exceptions": ["/"] }]
+    "spaced-comment": "off"
+  }
 }
