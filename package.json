@@ -11,6 +11,9 @@
   "bugs": "https://github.com/ricealexander/helpers/issues",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "serve": "parcel index.html"
+  },
   "devDependencies": {
     "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.1",
