@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "globals": {
+    "$": false
+  },
+  "plugins": ["html"],
+  "settings": {
+    "html/html-extensions": [".html", ".php"]
+  },
+  "extends": "airbnb",
+  "rules": {}
+}
