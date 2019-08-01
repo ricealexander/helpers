@@ -1,4 +1,8 @@
-import { formatTimestamp as sampleFunction } from './lib';
+import { convertObjectToArray } from './lib';
 
-const samples = [90, '12345', '10', '10000000000', 'abc'];
-console.log(samples.map(sample => sampleFunction(sample)));
+const image = {
+  src: 'assets/image/cute-kitten.png',
+  alt: 'A happy kitten in a Santa hat',
+};
+
+console.log(convertObjectToArray(image));
