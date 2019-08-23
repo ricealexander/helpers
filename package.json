@@ -21,8 +21,6 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
-    "parcel": "^1.12.3",
-    "stylelint": "^10.1.0",
-    "stylelint-config-standard": "^18.3.0"
+    "parcel": "^1.12.3"
   }
 }
