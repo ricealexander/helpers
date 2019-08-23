@@ -7,13 +7,19 @@
   "globals": {
     "$": false
   },
-  "plugins": ["html"],
-  "settings": {
-    "html/html-extensions": [".html", ".php"]
-  },
   "extends": "airbnb",
   "rules": {
     // "spaced-comment": ["error", "always", { "exceptions": ["/"] }]
-    "spaced-comment": "off"
+    "spaced-comment": "off",
+    "key-spacing": "off",
+    "linebreak-style": ["error", "unix"],
+    "no-multi-spaces": ["error", {
+      "exceptions": {
+        "ImportDeclaration": true,
+        "Property": true,
+        "VariableDeclarator": true
+      },
+      "ignoreEOLComments": true
+    }]
   }
 }
