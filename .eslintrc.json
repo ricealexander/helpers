@@ -13,13 +13,6 @@
     "spaced-comment": "off",
     "key-spacing": "off",
     "linebreak-style": ["error", "unix"],
-    "no-multi-spaces": ["error", {
-      "exceptions": {
-        "ImportDeclaration": true,
-        "Property": true,
-        "VariableDeclarator": true
-      },
-      "ignoreEOLComments": true
-    }]
+    "no-multi-spaces": "off"
   }
 }
