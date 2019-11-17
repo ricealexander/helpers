@@ -1,14 +1,11 @@
-import { parseTwitterUserLink } from './lib';
+import { getHexColor } from './lib';
 
 console.log({
-  partial: parseTwitterUserLink('stlpublicradio'),
-  handle: parseTwitterUserLink('@stlpublicradio'),
-  url: parseTwitterUserLink('https://twitter.com/stlpublicradio'),
-  edgeCases: {
-    // should we extract user from status messages?
-    statusLink: parseTwitterUserLink('https://twitter.com/stlpublicradio/status/1159624721769672704'),
-    // this is a valid link!
-    handleInURL: parseTwitterUserLink('https://twitter.com/@stlpublicradio'),
-    incompleteURL: parseTwitterUserLink('twitter.com/stlpublicradio'),
-  },
+  twoDigit: getHexColor('#12'),
+  threeDigit: getHexColor('#123'),
+  sixDigit: getHexColor('#123456'),
+  eightDigit: getHexColor('#12345600'),
+  namedColor: getHexColor('SteelBlue'),
+  namedColorMixedCase: getHexColor('sTeElBlUe'),
+  wrongName: getHexColor('BloodOrange'),
 });
