@@ -1,18 +1,47 @@
 {
+  "parserOptions": {
+    "sourceType": "module"
+  },
   "env": {
     "browser": true,
     "es6": true,
     "node": true
   },
-  "globals": {
-    "$": false
-  },
-  "extends": "airbnb",
+  "extends": [ "airbnb" ],
   "rules": {
-    // "spaced-comment": ["error", "always", { "exceptions": ["/"] }]
-    "spaced-comment": "off",
-    "key-spacing": "off",
-    "linebreak-style": ["error", "unix"],
-    "no-multi-spaces": "off"
+    "arrow-parens": ["error", "as-needed"],
+    "brace-style": ["error", "stroustrup"],
+    "comma-dangle": ["error", "always-multiline"],
+    "indent": ["error", 2],
+    "key-spacing": ["error", {
+      "beforeColon": false,
+      "afterColon": true,
+      "mode": "minimum"
+    }],
+    "no-multi-spaces": ["error", {
+      "exceptions": {
+        "ImportDeclaration": true,
+        "Property": true,
+        "VariableDeclarator": true
+      },
+      "ignoreEOLComments": true
+    }],
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": ["acc", "accumulator", "object", "result"]
+    }],
+    "no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }],
+    "no-useless-concat": "error",
+    "prefer-template": "off",
+    "semi": ["error", "never"],
+    "space-before-function-paren": ["error", "never"],
+    "quote-props": ["error", "as-needed"],
+    "quotes": ["error", "single", {
+      "avoidEscape": false,
+      "allowTemplateLiterals": false
+    }]
   }
 }
