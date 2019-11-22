@@ -12,7 +12,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "serve": "parcel index.html"
+    "serve": "parcel index.html",
+    "test": "jasmine"
   },
   "devDependencies": {
     "eslint": "^5.3.1",
