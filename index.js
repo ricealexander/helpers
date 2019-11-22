@@ -1,4 +1,4 @@
-import { getHexColor } from './lib';
+import { getHexColor } from './helpers';
 
 console.log({
   twoDigit: getHexColor('#12'),
