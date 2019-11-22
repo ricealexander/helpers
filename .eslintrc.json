@@ -5,6 +5,7 @@
   "env": {
     "browser": true,
     "es6": true,
+    "jasmine": true,
     "node": true
   },
   "extends": [ "airbnb" ],
@@ -35,6 +36,13 @@
       "varsIgnorePattern": "^_"
     }],
     "no-useless-concat": "error",
+    "operator-linebreak": ["error", "after", {
+      "overrides": {
+        "?": "before",
+        ":": "before",
+        "+=": "before"
+      }
+    }],
     "prefer-template": "off",
     "semi": ["error", "never"],
     "space-before-function-paren": ["error", "never"],
