@@ -6,9 +6,9 @@
 // - a Node if there is only one match
 // - undefined if there are no matches
 
-const query = (selector) => {
-  const nodes = document.querySelectorAll(selector);
-  return (nodes.length > 1) ? nodes : nodes[0];
-};
+const query = selector => {
+  const nodes = document.querySelectorAll(selector)
+  return (nodes.length > 1) ? nodes : nodes[0]
+}
 
-export default query;
+export default query

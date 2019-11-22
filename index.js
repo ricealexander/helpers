@@ -1,4 +1,4 @@
-import { getHexColor } from './helpers';
+import { getHexColor } from './helpers'
 
 console.log({
   twoDigit: getHexColor('#12'),
@@ -8,4 +8,4 @@ console.log({
   namedColor: getHexColor('SteelBlue'),
   namedColorMixedCase: getHexColor('sTeElBlUe'),
   wrongName: getHexColor('BloodOrange'),
-});
+})

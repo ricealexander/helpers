@@ -19,6 +19,6 @@ const convertObjectToArray = object => (
     // especially when converting from JSON
     .sort()
     .map(key => ({ key, value: object[key] }))
-);
+)
 
-export default convertObjectToArray;
+export default convertObjectToArray
