@@ -1,16 +1,5 @@
-const makeStartWith = (string, starter) => {
-  if (!string || !starter) return string
-
-  if (string.startsWith(starter)) return string
-  return `${starter}${string}`
-}
-
-const removeCharacter = (string, character) => {
-  if (!string || !character) return string
-
-  const regex = new RegExp(character, 'g')
-  return string.replace(regex, '')
-}
+import makeStartWith from './makeStartWith'
+import removeCharacters from './removeCharacters'
 
 const parseTwitterUserLink = segment => {
   if (!segment || typeof segment !== 'string') return null
@@ -23,7 +12,7 @@ const parseTwitterUserLink = segment => {
     const partial = segment.split('twitter.com/')[1]
     if (!partial || partial.includes('/')) return null
 
-    const url = removeCharacter(`https://twitter.com/${partial}`, '@')
+    const url = removeCharacters(`https://twitter.com/${partial}`, '@')
     const handle = makeStartWith(partial, '@')
     return `<a href="${url}">${handle}</a>`
   }
