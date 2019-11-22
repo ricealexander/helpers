@@ -4,29 +4,34 @@
 // deep-clone from:
 // https://stackoverflow.com/questions/38416020/deep-copy-in-es6-using-the-spread-syntax#answer-53771927
 
-const tidyDeepClone = obj => {
-  if (typeof obj !== 'object' || obj === null) {
-    return obj
+const valueIsValid = value => (
+  value !== undefined
+  && value !== ''
+  && value !== null
+)
+
+const tidyDeepClone = object => {
+  if (typeof object !== 'object' || object === null) {
+    return object
   }
 
-  if (obj instanceof Date) {
-    return new Date(obj.getTime())
+  if (object instanceof Date) {
+    return new Date(object.getTime())
   }
 
-  if (obj instanceof Array) {
-    return obj.reduce((arr, item, i) => {
-      arr[i] = tidyDeepClone(item)
-      return arr
+  if (object instanceof Array) {
+    return object.reduce((result, item, i) => {
+      result[i] = tidyDeepClone(item)
+      return result
     }, [])
   }
 
-  if (obj instanceof Object) {
-    return Object.keys(obj).reduce((newObj, key) => {
-      if (obj[key] === undefined || obj[key] === '' || obj[key] === null) return newObj
-      newObj[key] = tidyDeepClone(obj[key])
-      return newObj
-    }, {})
-  }
+  // object is an instance of Object
+  return Object.keys(object).reduce((result, key) => {
+    if (!valueIsValid(object[key])) return result
+    result[key] = tidyDeepClone(object[key])
+    return result
+  }, {})
 }
 
 export default tidyDeepClone
