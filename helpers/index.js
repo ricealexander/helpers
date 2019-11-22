@@ -8,11 +8,11 @@ export { query } from './queries';
 export { queryEach } from './queries';
 
 // Other
-export { default as convertObjectToArray } from './convert-object-to-array';
-export { default as getHexColor } from './color-converters';
-export { default as handleBounds }  from './handle-bounds';
-export { default as parseKeyTrail } from './parse-key-trail';
-export { default as parseTwitterUserLink } from './parse-twitter-user-link';
+export { default as convertObjectToArray } from './convertObjectToArray';
+export { default as getHexColor } from './getHexColor';
+export { default as handleArrayBounds }  from './handleArrayBounds';
+export { default as parseKeyTrail } from './parseKeyTrail';
+export { default as parseTwitterUserLink } from './parseTwitterUserLink';
 export { default as round } from './round';
-export { default as tidyDeepClone } from './clones';
-export { default as toKebabCase }   from './to-kebab-case';
+export { default as tidyDeepClone } from './tidyDeepClone';
+export { default as toKebabCase }   from './toKebabCase';

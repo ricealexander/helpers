@@ -1,4 +1,4 @@
-// handleBounds
+// handleArrayBounds
 ///  when given a range, cap off values
 ///  at the edges of the range.
 
@@ -6,7 +6,7 @@
 ///  values smaller than 0 return 0
 ///  values larger than 100 return 100
 
-const handleBounds = (value, maxValue, minValue = 0) => {
+const handleArrayBounds = (value, maxValue, minValue = 0) => {
   const number = Number(value);
   const max = Number(maxValue);
   const min = Number(minValue);
@@ -21,4 +21,4 @@ const handleBounds = (value, maxValue, minValue = 0) => {
   return number;
 };
 
-export default handleBounds;
+export default handleArrayBounds;
