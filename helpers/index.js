@@ -1,7 +1,6 @@
 /* eslint-disable no-multi-spaces */
 export { default as conditionalSwitch           } from './conditionalSwitch'
 export { default as containsLetters             } from './containsLetters'
-export { default as convertObjectToArray        } from './convertObjectToArray'
 export { default as createStickyElement         } from './createStickyElement'
 export { default as escapeRegexCharacters       } from './escapeRegexCharacters'
 export { default as formatCharacters            } from './formatCharacters'
