@@ -15,6 +15,8 @@
     "source.fixAll.eslint": true
   },
 
+  "eslint.alwaysShowStatus": true,
+
   "explorer.openEditors.visible": 5,
 
   "files.eol": "\n",
