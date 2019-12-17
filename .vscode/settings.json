@@ -10,7 +10,10 @@
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
 
-  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true
+  },
 
   "explorer.openEditors.visible": 5,
 
