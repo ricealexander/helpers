@@ -66,7 +66,6 @@
     "import/export": "error",
     "import/exports-last": "error",
     "import/first": "error",
-    "import/group-exports": "error",
     "import/max-dependencies": ["error", {
       "max": 10
     }],
@@ -107,6 +106,7 @@
     "import/default": "off",
     "import/dynamic-import-chunkname": "off",
     "import/extensions": "off",
+    "import/group-exports": "off",
     "import/namespace": "off",
     "import/no-absolute-path": "off",
     "import/no-commonjs": "off",

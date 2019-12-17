@@ -1,1 +1,3 @@
-export default string => /[A-Za-z]/.test(string)
+const containsLetters = string => /[A-Za-z]/.test(string)
+
+export default containsLetters
