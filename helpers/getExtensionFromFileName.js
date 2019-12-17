@@ -1,4 +1,4 @@
-function getExtensionFromFileName(file) {
+function getExtensionFromFileName (file) {
   if (typeof file !== 'string') {
     throw new TypeError(
       `Argument must be of type "string". Instead got "${typeof file}"`,

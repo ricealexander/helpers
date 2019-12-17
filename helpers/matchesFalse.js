@@ -2,7 +2,7 @@
 // created for handling sloppy CSV data, but is not limited to that use case
 // accepts only: false, 0, 'n', 'no', 'f', 'false', '0'
 
-function matchesFalse(value) {
+function matchesFalse (value) {
   if (typeof value === 'boolean') {
     return value === false
   }

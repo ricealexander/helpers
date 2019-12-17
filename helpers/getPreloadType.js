@@ -1,4 +1,4 @@
-function getPreloadType(_extension) {
+function getPreloadType (_extension) {
   if (typeof _extension !== 'string') {
     throw new TypeError(
       `Argument must be of type "string". Instead got "${typeof _extension}"`,

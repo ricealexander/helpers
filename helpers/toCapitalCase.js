@@ -1,4 +1,4 @@
-function toCapitalCase(string) {
+function toCapitalCase (string) {
   if (!string) return string
   return string
     .split(/\s+/) // split on groups of whitespace

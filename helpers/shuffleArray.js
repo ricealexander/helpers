@@ -3,7 +3,7 @@
 
 import getRandomNumberInclusive from './getRandomNumberInclusive'
 
-function shuffleArray(_array) {
+function shuffleArray (_array) {
   const array = [..._array]
   const finalIndex = array.length - 1
 

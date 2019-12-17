@@ -7,13 +7,13 @@
 // var object = {a: { b: { c: 'd'}}};
 // console.log(parseKeyTrail(object, 'a.b.c')); // returns: 'd'
 
-function parseKeyTrail(object, string) {
+function parseKeyTrail (object, string) {
   if (
     !string || typeof string !== 'string' ||
     !object || typeof object !== 'object'
   ) return undefined
 
-  function followTrail(objectLevel, key) {
+  function followTrail (objectLevel, key) {
     if (objectLevel === undefined || objectLevel[key] === undefined) return undefined
     return objectLevel[key]
   }

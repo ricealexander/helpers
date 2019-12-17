@@ -1,4 +1,4 @@
-function formatDate(string) {
+function formatDate (string) {
   const date = new Date(string)
   if (Number.isNaN(date)) return string
 

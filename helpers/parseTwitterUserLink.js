@@ -5,10 +5,12 @@ const parseTwitterUserLink = segment => {
   if (!segment || typeof segment !== 'string') return null
 
   // if we're given a URL
-  if (segment.startsWith('https://twitter.com/')
-   || segment.startsWith('http://twitter.com/')
-   || segment.startsWith('//twitter.com/')
-   || segment.startsWith('twitter.com/')) {
+  if (
+    segment.startsWith('https://twitter.com/') ||
+    segment.startsWith('http://twitter.com/') ||
+    segment.startsWith('//twitter.com/') ||
+    segment.startsWith('twitter.com/')
+  ) {
     const partial = segment.split('twitter.com/')[1]
     if (!partial || partial.includes('/')) return null
 

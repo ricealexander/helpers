@@ -1,7 +1,7 @@
 // accepts an array and a number of smaller arrays to return
 // this is similar to lodash's chunk function
 
-function splitArray(array, size = 1) {
+function splitArray (array, size = 1) {
   const chunkCount = Math.ceil(array.length / size)
   const result = []
 

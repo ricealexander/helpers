@@ -1,4 +1,4 @@
-function getMimeType(_extension) {
+function getMimeType (_extension) {
   let extension = _extension.toLowerCase()
   if (extension.startsWith('.')) extension = extension.slice(1)
 

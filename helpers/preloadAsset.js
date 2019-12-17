@@ -5,7 +5,7 @@ import getPreloadType           from './getPreloadType'
 // preload asset takes a file name and optional values for attributes
 // if 'as' and 'type' are not provided, preloadAsset attempts to coerce
 // the sourceType and MimeType from the file extension
-function preloadAsset(file, { as, crossorigin = false, type }) {
+function preloadAsset (file, { as, crossorigin = false, type }) {
   if (!file) {
     throw new Error('First Argument is required')
   }

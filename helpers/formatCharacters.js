@@ -2,7 +2,7 @@ import escapeRegexCharacters from './escapeRegexCharacters'
 
 const specialCharacters = '`~!@#$%^&*()-_=+[{]}\\|;:\'",<.>/?'
 
-function formatCharacters(string, options = {}) {
+function formatCharacters (string, options = {}) {
   const characters = options.characters || specialCharacters.split('')
   const className = options.className
     ? ` class="${options.className}"`

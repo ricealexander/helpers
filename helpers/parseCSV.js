@@ -6,7 +6,7 @@
 // An RFC 4180-compliant CSV parser
 // based on: https://stackoverflow.com/questions/8493195/how-can-i-parse-a-csv-string-with-javascript-which-contains-comma-in-data#answer-41563966
 
-function parseCSV(text) {
+function parseCSV (text) {
   let previousLetter = ''
   let line = ['']
   const result = [line]

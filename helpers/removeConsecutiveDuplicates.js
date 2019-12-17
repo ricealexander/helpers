@@ -1,4 +1,4 @@
-function removeConsecutiveDuplicates(dirtyArray) {
+function removeConsecutiveDuplicates (dirtyArray) {
   return [...dirtyArray].filter((item, index, array) => {
     // last item is never a duplicate
     if (index === array.length - 1) return item
