@@ -11,6 +11,7 @@ export { default as getExtensionFromFileName    } from './getExtensionFromFileNa
 export { default as getHexColor                 } from './getHexColor'
 export { default as getMimeType                 } from './getMimeType'
 export { default as getNthLastItem              } from './getNthLastItem'
+export { default as getPreloadType              } from './getPreloadType'
 export { default as getRandomItems              } from './getRandomItems'
 export { default as getRandomNumberInclusive    } from './getRandomNumberInclusive'
 export { default as handleArrayBounds           } from './handleArrayBounds'
