@@ -1,13 +1,25 @@
-// Query shorthand
-// shorthand for document.querySelector and document.querySelectorAll
+import isElementType from './isElementType'
 
-// accepts a string selector and returns:
-// - a NodeList if there are multiple matches
-// - a Node if there is only one match
-// - undefined if there are no matches
+// query can be used as an alternative to querySelector and querySelectorAll
+//   it accepts a string selector and an optional source to query from
+//   if it finds multiple matches, it returns a NodeList
+//   if it finds a single match, it returns an Element
+//   it can instead accept a Node/NodeList which it returns as is
+//     this allows it to "parse" an Element-based or string input
 
-const query = selector => {
-  const nodes = document.querySelectorAll(selector)
+const query = (selector, source = document) => {
+  // If selector is already a Node/NodeList, our job is done
+  if (isElementType(selector)) return selector
+
+  // Otherwise, validate our arguments
+  if (typeof selector !== 'string') {
+    throw new TypeError(`First argument must be a string. Instead got ${typeof selector}`)
+  }
+  if (!isElementType(source)) {
+    throw new TypeError(`Second argument must be a Node/NodeList. Instead got ${source}`)
+  }
+
+  const nodes = source.querySelectorAll(selector)
   return (nodes.length > 1) ? nodes : nodes[0]
 }
 
