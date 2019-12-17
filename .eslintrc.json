@@ -50,7 +50,7 @@
     }],
     "prefer-template": "off",
     "semi": ["error", "never"],
-    "space-before-function-paren": ["error", "never"],
+    "space-before-function-paren": ["error", "always"],
     "quote-props": ["error", "as-needed", {
       "keywords": true,
       "numbers": true
