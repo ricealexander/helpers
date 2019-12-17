@@ -20,6 +20,7 @@ export { default as isLastCharacterCapitalized  } from './isLastCharacterCapital
 export { default as makeStartWith               } from './makeStartWith'
 export { default as matchesFalse                } from './matchesFalse'
 export { default as matchesTrue                 } from './matchesTrue'
+export { default as parseCSV                    } from './parseCSV'
 export { default as parseKeyTrail               } from './parseKeyTrail'
 export { default as parseTimestamp              } from './parseTimestamp'
 export { default as parseTwitterUserLink        } from './parseTwitterUserLink'
