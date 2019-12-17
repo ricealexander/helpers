@@ -15,7 +15,9 @@ Spec files are built with **Jasmine** and test helper functions.
 ❌ **conditionalSwitch**
 <br>❌ **containsLetters**
 <br>❌ **createStickyElement**
+<br>❌ **dispatchCustomEvent**
 <br>❌ **escapeRegexCharacters**
+<br>❌ **findCheckedElement**
 <br>❌ **formatCharacters**
 <br>❌ **formatDate**
 <br>❌ **formatPercentage**
