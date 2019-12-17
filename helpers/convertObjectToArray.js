@@ -9,8 +9,8 @@
 //
 // Converted Object:
 // [
-//   { key: "src", value: "assets/image/cute-kitten.png" },
-//   { key: "alt", value: "A happy kitten in a Santa hat" }
+//   ["src", "assets/image/cute-kitten.png"],
+//   ["alt", "A happy kitten in a Santa hat"],
 // ]
 
 const convertObjectToArray = object => (
@@ -18,7 +18,7 @@ const convertObjectToArray = object => (
     // object keys are typically ordered, but sometimes there can be quirks,
     // especially when converting from JSON
     .sort()
-    .map(key => ({ key, value: object[key] }))
+    .map(key => ([key, object[key]]))
 )
 
 export default convertObjectToArray
