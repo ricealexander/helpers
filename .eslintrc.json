@@ -10,6 +10,7 @@
     "node": true
   },
   "plugins": [
+    "import",
     "unicorn"
   ],
   "extends": [ "airbnb" ],
@@ -59,6 +60,68 @@
       "avoidEscape": false,
       "allowTemplateLiterals": false
     }],
+
+
+
+    "import/export": "error",
+    "import/exports-last": "error",
+    "import/first": "error",
+    "import/group-exports": "error",
+    "import/max-dependencies": ["error", {
+      "max": 10
+    }],
+    "import/named": "error",
+    "import/newline-after-import": "error",
+    "import/no-amd": "error",
+
+    "import/no-anonymous-default-export": ["error", {
+      "allowArray": false,
+      "allowArrowFunction": false,
+      "allowAnonymousClass": false,
+      "allowAnonymousFunction": false,
+      "allowCallExpression": true,
+      "allowLiteral": false,
+      "allowObject": false
+    }],
+    "import/no-cycle": "error",
+    "import/no-duplicates": "error",
+    "import/no-dynamic-require": "error",
+    "import/no-extraneous-dependencies": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-named-as-default": "error",
+    "import/no-named-as-default-member": "error",
+    "import/no-self-import": "error",
+    "import/no-unassigned-import": "error",
+    "import/no-unresolved": ["error", {
+      "caseSensitive": true,
+      "commonjs": true
+    }],
+    "import/no-useless-path-segments": ["error", {
+      "noUselessIndex": true
+    }],
+    "import/no-webpack-loader-syntax": "error",
+    "import/order": ["error", {
+      "groups": [["builtin", "external", "internal"]]
+    }],
+    "import/prefer-default-export": "error",
+    "import/default": "off",
+    "import/dynamic-import-chunkname": "off",
+    "import/extensions": "off",
+    "import/namespace": "off",
+    "import/no-absolute-path": "off",
+    "import/no-commonjs": "off",
+    "import/no-default-export": "off",
+    "import/no-deprecated": "off",
+    "import/no-internal-modules": "off",
+    "import/no-named-default": "off",
+    "import/no-named-export": "off",
+    "import/no-namespace": "off",
+    "import/no-nodejs-modules": "off",
+    "import/no-relative-parent-imports": "off",
+    "import/no-restricted-paths": "off",
+    "import/no-unused-modules": "off",
+    "import/unambiguous": "off",
+
 
 
     "unicorn/error-message": "error",
