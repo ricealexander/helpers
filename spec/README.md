@@ -32,6 +32,8 @@ Spec files are built with **Jasmine** and test helper functions.
 <br>❌ **handleArrayBounds**
 <br>❌ **isElementType**
 <br>❌ **isLastCharacterCapitalized**
+<br>❌ **isMultipleCurry**
+<br>❌ **isMultipleOf**
 <br>❌ **makeStartWith**
 <br>❌ **matchesFalse**
 <br>❌ **matchesTrue**

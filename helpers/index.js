@@ -19,6 +19,8 @@ export { default as getRandomNumberInclusive    } from './getRandomNumberInclusi
 export { default as handleArrayBounds           } from './handleArrayBounds'
 export { default as isElementType               } from './isElementType'
 export { default as isLastCharacterCapitalized  } from './isLastCharacterCapitalized'
+export { default as isMultipleCurry             } from './isMultipleCurry'
+export { default as isMultipleOf             } from './isMultipleOf'
 export { default as makeStartWith               } from './makeStartWith'
 export { default as matchesFalse                } from './matchesFalse'
 export { default as matchesTrue                 } from './matchesTrue'
