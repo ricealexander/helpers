@@ -13,12 +13,12 @@ describe('round.js', () => {
   })
 
   it('rounds numbers with decimals > 0.5 up', () => {
-    const ϕ = 1.6180340 // Golden Ratio
+    const ϕ = 1.618034 // Golden Ratio
     expect(round(ϕ)).toBe(2)
   })
 
   it('rounds numbers with decimals = 0.5 up', () => {
-    const α = 2.50 // Feigenbaum constant (to 2 digits)
+    const α = 2.5 // Feigenbaum constant (to 2 digits)
     expect(round(α)).toBe(3)
   })
 

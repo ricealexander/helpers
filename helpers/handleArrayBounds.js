@@ -11,9 +11,10 @@ const handleArrayBounds = (value, maxValue, minValue = 0) => {
   const max = Number(maxValue)
   const min = Number(minValue)
 
-  if (Number.isNaN(number)
-   || Number.isNaN(max)
-   || Number.isNaN(min)
+  if (
+    Number.isNaN(number) ||
+    Number.isNaN(max) ||
+    Number.isNaN(min)
   ) return NaN
 
   if (number < min) return min

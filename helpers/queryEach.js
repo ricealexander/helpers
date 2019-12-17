@@ -4,8 +4,7 @@
 
 const queryEach = (selector, callback) => {
   const nodes = document.querySelectorAll(selector)
-  if (!nodes.length) return
-  nodes.forEach(callback)
+  nodes.forEach((value, index, array) => callback(value, index, array))
 }
 
 export default queryEach

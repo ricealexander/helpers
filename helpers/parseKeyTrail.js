@@ -8,8 +8,9 @@
 // console.log(parseKeyTrail(object, 'a.b.c')); // returns: 'd'
 
 function parseKeyTrail(object, string) {
-  if (!string || typeof string !== 'string'
-   || !object || typeof object !== 'object'
+  if (
+    !string || typeof string !== 'string' ||
+    !object || typeof object !== 'object'
   ) return undefined
 
   function followTrail(objectLevel, key) {
@@ -18,7 +19,7 @@ function parseKeyTrail(object, string) {
   }
 
   const trail = string.split('.')
-  return trail.reduce(followTrail, object)
+  return trail.reduce((result, value) => followTrail(result, value), object)
 }
 
 export default parseKeyTrail

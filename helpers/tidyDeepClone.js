@@ -5,9 +5,9 @@
 // https://stackoverflow.com/questions/38416020/deep-copy-in-es6-using-the-spread-syntax#answer-53771927
 
 const valueIsValid = value => (
-  value !== undefined
-  && value !== ''
-  && value !== null
+  value !== undefined &&
+  value !== '' &&
+  value !== null
 )
 
 const tidyDeepClone = object => {
@@ -19,7 +19,7 @@ const tidyDeepClone = object => {
     return new Date(object.getTime())
   }
 
-  if (object instanceof Array) {
+  if (Array.isArray(object)) {
     return object.reduce((result, item, i) => {
       result[i] = tidyDeepClone(item)
       return result

@@ -13,7 +13,9 @@ const round = (_number, _places = 0) => {
   const places = Number(_places)
 
   if (Number.isNaN(places)) {
-    throw new Error(`argument places could not be resolved to a places. Instead got ${_places}`)
+    throw new TypeError(
+      `First Argument must be a valid Number. Instead got ${_places}`
+    )
   }
 
   return (Number.isNaN(number))

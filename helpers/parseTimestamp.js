@@ -1,8 +1,9 @@
 const parseTimestamp = timestamp => {
   // validate "00", "00:00", "00:00:00" format
-  if (typeof timestamp !== 'string'
-    || timestamp.split(':').length === 0
-    || timestamp.split(':').length > 3
+  if (
+    typeof timestamp !== 'string' ||
+    timestamp.split(':').length === 0 ||
+    timestamp.split(':').length > 3
   ) return null
 
   // when provided with a timestamp: "01:23:45"

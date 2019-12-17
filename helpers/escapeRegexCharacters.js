@@ -1,5 +1,5 @@
 const escapeRegexCharacters = string => (
-  string.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')
+  string.replace(/[$()*+-./?[\\\]^{|}]/g, '\\$&')
 )
 
 export default escapeRegexCharacters

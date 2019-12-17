@@ -8,7 +8,9 @@ function formatCharacters(string, options = {}) {
     ? ` class="${options.className}"`
     : ''
 
-  const patternString = characters.map(escapeRegexCharacters).join('|')
+  const patternString = characters
+    .map(character => escapeRegexCharacters(character))
+    .join('|')
   const pattern = new RegExp(`(${patternString})`, 'g')
 
   return string.replace(pattern, `<span${className}>$1</span>`)

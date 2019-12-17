@@ -7,9 +7,11 @@ const parseNode = selector => {
   // If it is already a Node format, return as is
   // WARN: HTMLCollection is not a NodeList and cannot be
   // converted into one. This may cause errors
-  if (selector instanceof Node
-    || selector instanceof NodeList
-    || selector instanceof HTMLCollection) return selector
+  if (
+    selector instanceof Node ||
+    selector instanceof NodeList ||
+    selector instanceof HTMLCollection
+  ) return selector
 
   // String is converted into a Node or NodeList
   if (typeof selector === 'string') {
