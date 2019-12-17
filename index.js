@@ -1,5 +1,6 @@
 import { getHexColor } from './helpers'
 
+// TODO: move these tests into spec
 console.log({
   twoDigit: getHexColor('#12'),
   threeDigit: getHexColor('#123'),
