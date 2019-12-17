@@ -51,3 +51,4 @@ Spec files are built with **Jasmine** and test helper functions.
 <br>❌ **toCapitalCase**
 <br>❌ **toKebabCase**
 <br>❌ **toSentenceCase**
+<br>❌ **toSlug**
