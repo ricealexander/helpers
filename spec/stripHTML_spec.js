@@ -18,7 +18,7 @@ describe('stripHTML.js', () => {
       .toBe('Sample paragraph')
 
     expect(stripHTML('Ends with <em>Italicized Text</em>'))
-      .toBe('Contains Italicized Text')
+      .toBe('Ends with Italicized Text')
 
     expect(stripHTML('<strong>Bold Text</strong> at the start'))
       .toBe('Bold Text at the start')
@@ -28,13 +28,11 @@ describe('stripHTML.js', () => {
   })
 
   it('should remove multi-line HTML', () => {
-    expect(stripHTML(`
-      <p>
+    expect(stripHTML(
+      `<p>
         Paragraph has its own line
-      </p>
-    `)).toBe(`
-      Paragraph has its own line
-    `)
+      </p>`
+    )).toBe('Paragraph has its own line')
   })
 
 
@@ -49,14 +47,12 @@ describe('stripHTML.js', () => {
   })
 
   it('should remove multi-line void tags', () => {
-    expect(stripHTML(`
-      Kitty Photo:<img
+    expect(stripHTML(
+      `Kitty Photo: <img
         src="...path to kitty photo"
         alt="cute kitty"
-      >
-    `)).toBe(`
-      Kitty Photo:
-    `)
+      >`
+    )).toBe('Kitty Photo: ')
   })
 
   it('should replace br tags with a linebreak', () => {
@@ -76,16 +72,14 @@ Phase 3: Profit`
 
   // Handle Nested HTML
   it('should remove nested HTML', () => {
-    expect(stripHTML(`
-      <label for="newsletter">
+    expect(stripHTML(
+      `<label for="newsletter">
         <input type="checkbox" id="newsletter"> Opt-In to Email Updates
-      </label>
-    `)).toBe(`
-       Opt-In to Email Updates
-    `)
+      </label>`
+      )).toBe(' Opt-In to Email Updates')
 
-    expect(stripHTML(`
-      <p>
+    expect(stripHTML(
+      `<p>
         <span class="uppercase">
           <span class="red">
             <span class="align-right">
@@ -95,7 +89,7 @@ Phase 3: Profit`
                     <s>
                       <b>
                         <i>
-                          <u>Fancy Text
+                          <u>Fancy Text</u>
                         </i>
                       </b>
                     </s>
@@ -105,16 +99,14 @@ Phase 3: Profit`
             </span>
           </span>
         </span>
-      </p>
-    `)).toBe(`
-      Fancy Text
-    `)
+      </p>`
+    )).toBe('Fancy Text')
   })
 
   // What it does not do
   it('should not remove non-void elements missing a closing tag', () => {
-    expect('<p>This is a paragraph').toBe('<p>This is a paragraph')
-    expect('<h3>Heading <em>1</p>').toBe('Heading <em>1')
+    expect('<h3>This is a paragraph').toBe('<h3>This is a paragraph')
+    expect('<h3>Heading <em>1</h3>').toBe('<h3>Heading <em>1</h3>')
     expect('A <span><span>B</span> C').toBe('A <span>B C')
   })
 })
