@@ -1,7 +1,5 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "pkief.material-icon-theme",
-    "shinnn.stylelint"
+    "dbaeumer.vscode-eslint"
   ]
 }
