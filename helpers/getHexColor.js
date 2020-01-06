@@ -147,43 +147,43 @@ const namedColors = [
   { hex: '#F5F5F5', name: 'WhiteSmoke' },
   { hex: '#FFFF00', name: 'Yellow' },
   { hex: '#9ACD32', name: 'YellowGreen' },
-];
+]
 
-const getHexColor = (color) => {
+const getHexColor = color => {
   // all color formats are expressed as strings
-  if (typeof color !== 'string') return null;
+  if (typeof color !== 'string') return null
 
   // Check if input is already a hex
 
   // 2-digit Hex
-  ///  convert '#12' to '#121212'
-  const twoDigitHex = /^#(\w{2})$/;
+  // convert '#12' to '#121212'
+  const twoDigitHex = /^#(\w{2})$/
   if (color.match(twoDigitHex)) {
-    const twoDigits = twoDigitHex.exec(color)[1];
-    return `#${twoDigits.repeat(3)}`;
+    const twoDigits = twoDigitHex.exec(color)[1]
+    return `#${twoDigits.repeat(3)}`
   }
 
   // 3-digit Hex
-  ///  convert '#123' to '#123123'
-  const threeDigitHex = /^#(\w{3})$/;
+  // convert '#123' to '#123123'
+  const threeDigitHex = /^#(\w{3})$/
   if (color.match(threeDigitHex)) {
-    const threeDigits = threeDigitHex.exec(color)[1];
-    return `#${threeDigits.repeat(2)}`;
+    const threeDigits = threeDigitHex.exec(color)[1]
+    return `#${threeDigits.repeat(2)}`
   }
 
   // 6-or-8-digit Hex
-  /// return '#123456' or '#12345600' as-is
-  const fullHexes = /^#(\w{6}|\w{8})$/;
-  if (color.match(fullHexes)) return color;
+  // return '#123456' or '#12345600' as-is
+  const fullHexes = /^#(\w{6}|\w{8})$/
+  if (color.match(fullHexes)) return color
 
   // check for Named Color
   const namedColorMatch = namedColors.find(namedColor => (
     namedColor.name.toLowerCase() === color.toLowerCase()
-  ));
-  if (namedColorMatch) return namedColorMatch.hex;
+  ))
+  if (namedColorMatch) return namedColorMatch.hex
 
   // return color if it couldn't be resolved
-  return color;
-};
+  return color
+}
 
-export default getHexColor;
+export default getHexColor

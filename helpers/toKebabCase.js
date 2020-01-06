@@ -1,5 +1,5 @@
-const toKebabCase = (string) => {
-  if (typeof string !== 'string') return null;
+const toKebabCase = string => {
+  if (typeof string !== 'string') return null
 
   // replace whitespace and '_' with '-'
   // add '-' between words (camelCase)
@@ -10,7 +10,7 @@ const toKebabCase = (string) => {
     .replace(/([a-z])([A-Z])/g, '$1-$2')
     .replace(/[^\w-]/g, '')
     .replace(/^-+|-+$/g, '')
-    .toLowerCase();
-};
+    .toLowerCase()
+}
 
-export default toKebabCase;
+export default toKebabCase
