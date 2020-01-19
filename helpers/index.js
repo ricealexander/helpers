@@ -1,6 +1,7 @@
 /* eslint-disable no-multi-spaces */
 export { default as conditionalSwitch           } from './conditionalSwitch'
 export { default as containsLetters             } from './containsLetters'
+export { default as createElement               } from './createElement'
 export { default as createStickyElement         } from './createStickyElement'
 export { default as dispatchCustomEvent         } from './dispatchCustomEvent'
 export { default as escapeRegexCharacters       } from './escapeRegexCharacters'
