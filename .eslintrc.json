@@ -28,12 +28,12 @@
       "code": 80,
       "comments": 80,
       "tabWidth": 2,
-      "ignoreComments": false,
       "ignoreRegExpLiterals": true,
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true,
-      "ignoreTrailingComments": false,
-      "ignoreUrls": true
+      "ignoreUrls": true,
+      "ignoreComments": false,
+      "ignoreTrailingComments": false
     }],
     "no-multi-spaces": ["error", {
       "exceptions": {
