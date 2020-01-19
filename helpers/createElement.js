@@ -32,7 +32,9 @@ function createElement (_selector, innerHTML = '') {
         const attributeValuePattern = /\[([^=]+)="?([^"\]]+)"?]/
         const attributePattern = /\[([^=]+)]/
 
-        if (attributeValuePattern.test(attribute)) { // matches [attribute="value"] or [attribute=value]
+        // matches [attribute="value"] or [attribute=value]
+        if (attributeValuePattern.test(attribute)) {
+          // eslint-disable-next-line max-len
           const [_, attributeName, value] = attribute.match(attributeValuePattern)
           element.setAttribute(attributeName, value)
         }
