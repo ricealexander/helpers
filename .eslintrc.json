@@ -24,6 +24,17 @@
       "afterColon": true,
       "mode": "minimum"
     }],
+    "max-len": ["error", {
+      "code": 80,
+      "comments": 80,
+      "tabWidth": 2,
+      "ignoreComments": false,
+      "ignoreRegExpLiterals": true,
+      "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
+      "ignoreTrailingComments": false,
+      "ignoreUrls": true
+    }],
     "no-multi-spaces": ["error", {
       "exceptions": {
         "ImportDeclaration": true,
