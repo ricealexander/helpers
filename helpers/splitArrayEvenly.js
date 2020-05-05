@@ -1,14 +1,18 @@
 // accepts an array and a number of smaller arrays to return
-// this is similar to lodash's chunk function
 
-function splitArray (array, size = 1) {
-  const chunkCount = Math.ceil(array.length / size)
+function splitArray (array, count = 2) {
+  const evenAmount = Math.floor(array.length / count)
+  const remainder = array.length % count
+
   const result = []
+  let sliceStart = 0
 
-  for (let index = 0; index < size; index += 1) {
-    const start = index * chunkCount
-    const end = (index + 1) * chunkCount
-    result.push(array.slice(start, end))
+  for (let i = 1; i <= count; i += 1) {
+    let sliceEnd = sliceStart + evenAmount
+    if (i <= remainder) sliceEnd += 1
+
+    result.push(array.slice(sliceStart, sliceEnd))
+    sliceStart = sliceEnd
   }
   return result
 }
