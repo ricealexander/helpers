@@ -15,7 +15,7 @@ const handleArrayBounds = (value, maxValue, minValue = 0) => {
     Number.isNaN(number) ||
     Number.isNaN(max) ||
     Number.isNaN(min)
-  ) return NaN
+  ) return Number.NaN
 
   if (number < min) return min
   if (number > max) return max

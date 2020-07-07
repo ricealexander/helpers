@@ -30,7 +30,9 @@ function parseKeyTrail (object, trail) {
   ) return undefined
 
   function followTrail (objectLevel, key) {
-    if (objectLevel === undefined || objectLevel[key] === undefined) return undefined
+    if (objectLevel === undefined || objectLevel[key] === undefined) {
+      return undefined
+    }
     return objectLevel[key]
   }
 

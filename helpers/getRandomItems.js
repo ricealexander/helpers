@@ -5,7 +5,7 @@ const getRandomItems = (array, quantity = 1) => {
 
   if (quantity > length) {
     throw new RangeError(
-      `quantity must be smaller than the array: ${quantity} !< ${length}`,
+      `quantity must be smaller than the array: ${quantity} !< ${length}`
     )
   }
   const items = []

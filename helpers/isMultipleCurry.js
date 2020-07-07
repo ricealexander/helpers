@@ -1,4 +1,4 @@
-// create a function which determines if a number is a multiple of the provided factor.
+// create a function determining if a number is a multiple of provided factor.
 // Example const isEven = isMultipleCurry(2)
 // isEven(32)
 

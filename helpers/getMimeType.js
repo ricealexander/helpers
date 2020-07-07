@@ -79,7 +79,7 @@ const mimeTypes = {
 function getMimeType (_extension) {
   if (typeof _extension !== 'string') {
     throw new TypeError(
-      `Argument must be of type "string". Instead got "${typeof _extension}"`,
+      `Argument must be of type "string". Instead got "${typeof _extension}"`
     )
   }
 

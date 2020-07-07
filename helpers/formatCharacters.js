@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/string-content */
 import escapeRegexCharacters from './escapeRegexCharacters'
 
 const specialCharacters = '`~!@#$%^&*()-_=+[{]}\\|;:\'",<.>/?'

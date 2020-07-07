@@ -19,7 +19,7 @@ const round = (_number, _places = 0) => {
   }
 
   return (Number.isNaN(number))
-    ? NaN
+    ? Number.NaN
     : Math.round(number * (10 ** places)) / (10 ** places)
 }
 

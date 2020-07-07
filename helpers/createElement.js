@@ -39,6 +39,40 @@
   })
 */
 
+const propertyApplier = (element, property) => {
+  // property is a class
+  if (property.startsWith('.')) element.classList.add(property.slice(1))
+
+  // property is an id
+  if (property.startsWith('#')) element.id = property.slice(1)
+
+  // property is an attribute
+  if (property.startsWith('[')) {
+    const attributeValuePattern = /\[([^=]+)="?([^"\]]+)"?]/ // matches [attribute="value"] or [attribute=value]
+    const attributePattern = /\[([^=]+)]/ // matches [attribute]
+
+    if (attributeValuePattern.test(property)) {
+      const [_, attributeName, value] = property.match(attributeValuePattern)
+      element.setAttribute(attributeName, value)
+    }
+
+    if (attributePattern.test(property)) {
+      const [_, attributeName] = property.match(attributePattern)
+      element.setAttribute(attributeName, '')
+    }
+  }
+
+  // property is text content
+  if (property.startsWith('{')) {
+    const [_, textContent] = property.match(/{([^}]+)}/) // matches {any content here}
+    element.textContent += textContent
+  }
+
+  return element
+}
+
+const startsWithLetter = string => /^[A-Za-z]/.test(string)
+
 function createElement (_selector, properties = {}) {
   if (typeof _selector !== 'string') {
     throw new TypeError(`Argument must be a string. Instead got ${typeof _selector}.`)
@@ -46,8 +80,7 @@ function createElement (_selector, properties = {}) {
 
   const selector = _selector.trim()
 
-  const startsWithLetter = /^[A-Za-z]/.test(selector)
-  if (!startsWithLetter) {
+  if (!startsWithLetter(selector)) {
     throw new Error('Argument must start with a letter.')
   }
 
@@ -55,40 +88,10 @@ function createElement (_selector, properties = {}) {
   const [tagName, ...attributes] = selector.match(segmentPattern)
 
   // create the element!
-  const element = document.createElement(tagName)
-
-  // add properties from the selector
-  attributes.forEach(attribute => {
-    // handle class
-    if (attribute.startsWith('.')) element.classList.add(attribute.slice(1))
-
-    // handle id
-    if (attribute.startsWith('#')) element.id = attribute.slice(1)
-
-    // handle attribute
-    if (attribute.startsWith('[')) {
-      const attributeValuePattern = /\[([^=]+)="?([^"\]]+)"?]/
-      const attributePattern = /\[([^=]+)]/
-
-      // matches [attribute="value"] or [attribute=value]
-      if (attributeValuePattern.test(attribute)) {
-        // eslint-disable-next-line max-len
-        const [_, attributeName, value] = attribute.match(attributeValuePattern)
-        element.setAttribute(attributeName, value)
-      }
-
-      if (attributePattern.test(attribute)) { // matches [attribute]
-        const [_, attributeName] = attribute.match(attributePattern)
-        element.setAttribute(attributeName, '')
-      }
-    }
-
-    // handle textContent
-    if (attribute.startsWith('{')) {
-      const [_, textContent] = attribute.match(/{([^}]+)}/) // matches {any content here}
-      element.textContent += textContent
-    }
-  })
+  const element = attributes.reduce(
+    (element, attribute) => propertyApplier(element, attribute),
+    document.createElement(tagName)
+  )
 
   // add properties from the properties object
   Object.entries(properties).forEach(([property, value]) => {

@@ -17,8 +17,8 @@ const parseTimestamp = timestamp => {
     .reduce((total, region, index) => {
       // allow decimals on the last region "01:23:45.678"
       const value = (index === 0)
-        ? parseFloat(region, 10)
-        : parseInt(region, 10)
+        ? Number.parseFloat(region, 10)
+        : Number.parseInt(region, 10)
       const multiplier = (60 ** index)
 
       return total + (value * multiplier)

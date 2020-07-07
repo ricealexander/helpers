@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/string-content */
 import { stripHTML } from '../helpers'
 
 // ⚠️⚠️⚠️ A failed test has been commented out
@@ -78,7 +79,7 @@ Phase 3: Profit`
       `<label for="newsletter">
         <input type="checkbox" id="newsletter"> Opt-In to Email Updates
       </label>`
-      )).toBe(' Opt-In to Email Updates')
+    )).toBe(' Opt-In to Email Updates')
 
     expect(stripHTML(
       `<p>
@@ -108,8 +109,8 @@ Phase 3: Profit`
 
   // Edge Cases
   it('should allow for uppercase tags', () => {
-    expect(stripHTML(`<H1>Heading</H1>`)).toBe('Heading')
-    expect(stripHTML(`<Hr>`)).toBe('')
+    expect(stripHTML('<H1>Heading</H1>')).toBe('Heading')
+    expect(stripHTML('<Hr>')).toBe('')
   })
 
 

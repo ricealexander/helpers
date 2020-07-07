@@ -1,4 +1,4 @@
-// toSlug takes a string and formats it as word characters delimited with underscores
+// toSlug takes a string and formats it as word characters and underscores
 // this would be similar to a toSnakeCase, except stricter
 const toSlug = string => string
   .replace(/\s+/g, '_')
