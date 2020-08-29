@@ -1,5 +1,6 @@
 /* eslint-disable no-multi-spaces */
 export { default as asyncMap                    } from './asyncMap'
+export { default as capitalize                  } from './capitalize'
 export { default as conditionalSwitch           } from './conditionalSwitch'
 export { default as containsLetters             } from './containsLetters'
 export { default as createElement               } from './createElement'
